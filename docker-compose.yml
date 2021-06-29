@@ -1,0 +1,10 @@
+version: "3"
+services: 
+    jupyter:
+        image: sagemath/sagemath@sha256:cc13600987d9ff4385fa2f22620d05c0ec7ebf2ff4722aa660d35c592ba33ada
+        container_name: sagemath-jupyter
+        command: sage-jupyter
+        ports:
+            - 8888:8888
+        volumes: 
+            - ${PWD}/EllipticCurveCryptography.ipynb:/home/sage/EllipticCurveCryptography.ipynb
